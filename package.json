@@ -1,7 +1,32 @@
 {
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "cypress": "^3.4.1",
+    "electron": "^6.0.9",
     "natural": "^0.6.3",
-    "pdfjs": "^2.3.0"
-  }
+    "pdfjs": "^2.3.0",
+    "react-bootstrap": "^1.0.0-beta.12"
+  },
+  "name": "autoe-light",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ./src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhee11/AutoE-Light.git"
+  },
+  "keywords": [
+    "light"
+  ],
+  "author": "abhinav mathur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhee11/AutoE-Light/issues"
+  },
+  "homepage": "https://github.com/abhee11/AutoE-Light#readme"
 }
