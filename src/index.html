@@ -1,0 +1,63 @@
+
+
+<script>
+  const { remote } = require("electron");
+  const { Menu, MenuItem } = remote;
+
+
+  const menu = new Menu();
+  menu.append(
+    new MenuItem({
+      label: "New instructions file",
+      click() {
+        console.log("item 1 clicked");
+      }
+    })
+  );
+  menu.append(new MenuItem({ type: "separator" }));
+  menu.append(
+    new MenuItem({
+      label: "Save current file",
+      type: "checkbox",
+      checked: true
+    })
+  );
+
+  menu.append(
+    new MenuItem({
+      label: "Delete current file",
+      type: "checkbox",
+      checked: false
+    })
+  );
+
+  window.addEventListener(
+    "contextmenu",
+    e => {
+      e.preventDefault();
+      menu.popup({ window: remote.getCurrentWindow() });
+    },
+    false
+  );
+</script>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Light</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+  </head>
+  <body>
+    <h1>AutoE-Light</h1>
+    <div id="root">
+    </div>
+    <button variant="primary" size="lg">
+      Create new Instructions file
+    </button>
+    <div>
+      <img src="./feather-logo.jpg" />
+    </div>
+  </body>
+</html>
